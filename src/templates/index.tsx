@@ -2,6 +2,7 @@ import {
   CloseOutlined,
   DesktopOutlined,
   FileOutlined,
+  HomeFilled,
   HomeOutlined,
   LogoutOutlined,
   PieChartOutlined,
@@ -25,6 +26,7 @@ import { saveLocalStorage } from "utils/localStorage";
 import { LANG } from "utils/localStorage/type";
 
 import { Link, useHistory } from "react-router-dom";
+import { UrlInternal } from "common/constants/endpoints";
 
 interface Props {
   children?: React.ReactNode;
@@ -99,6 +101,7 @@ const Template: React.FC = ({ children }: Props) => {
               src={Logo}
               alt="logo"
               className={collapsed ? "mini-logo" : ""}
+              onClick={() => history.push(UrlInternal.HOME)}
             />
           </div>
           <Menu
@@ -128,7 +131,8 @@ const Template: React.FC = ({ children }: Props) => {
               <Col className="box-info">
                 <Row gutter={[30, 0]}>
                   <Col className="center-icon">
-                    <i className="ti ti-home" />
+                    {/* <i className="ti ti-home" /> */}
+                    <HomeFilled className="ti-home" />
                     {/* <HomeOutlined /> */}
                   </Col>
                   <Col className="center-icon">

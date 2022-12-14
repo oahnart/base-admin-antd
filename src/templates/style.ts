@@ -10,6 +10,7 @@ export const Container = styled.div`
       width: 120px;
       object-fit: contain;
       height: auto;
+      cursor: pointer;
       &.mini-logo {
         width: 70px;
       }
